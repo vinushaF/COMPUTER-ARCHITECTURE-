@@ -1,0 +1,27 @@
+LXI H, 100
+
+MOV B,M
+
+MVI A, 00
+
+MOV CA
+
+INX H
+
+CONT: ADD M
+
+JNC SKIP
+
+INR C
+
+SKIP: DCR B
+
+JNZ CONT
+
+STA 102
+
+MOV A, C
+
+STA 103
+
+HLT
